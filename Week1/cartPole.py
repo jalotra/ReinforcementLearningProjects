@@ -31,11 +31,12 @@ def play(env, policy):
     return mainLoop(observation, done, score)
 
 def Epochs(number_of_epochs, env, policy):
+    main_score = []
     for _ in range(number_of_epochs):
-        play(env, policy)[0]
-
+        main_score.append(play(env, policy)[0])
+    return main_score
 
 if __name__ == "__main__":
     env = gym.make('CartPole-v1')
     CurrentPolicy = np.random.randn(1, 4)
-    print('Policy Score' , Epochs(10, env, CurrentPolicy))
+    print('Policy Score' , Epochs(100, env, CurrentPolicy))
