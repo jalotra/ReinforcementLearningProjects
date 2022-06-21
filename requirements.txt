@@ -1,2 +1,2 @@
-numpy==1.16.4
+numpy==1.22.0
 -e git+https://github.com/openai/gym@5e6f11d07781404459672e114cb86cb6a1a015c6#egg=gym
